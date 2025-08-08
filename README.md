@@ -101,6 +101,7 @@ Criar um sistema básico de CRUD de usuários com as seguintes funcionalidades:
 }
 
 ### 3. **DELETE /api/usuarios**
+
 - **Descrição**: Deleta um  usuário
 - **Body**:
 ```json
