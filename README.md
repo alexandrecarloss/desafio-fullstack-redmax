@@ -87,7 +87,7 @@ Criar um sistema básico de CRUD de usuários com as seguintes funcionalidades:
 - **Resposta**: Usuário criado
 - **Status**: 201
 
-````json
+```json
 {
   "success": true,
   "message": "Usuário criado com sucesso",
@@ -99,20 +99,20 @@ Criar um sistema básico de CRUD de usuários com as seguintes funcionalidades:
     "created_at": "2024-01-15T11:00:00Z"
   }
 }
-
-´´´
+```
 
 ### 3. **DELETE /api/usuarios**
 
-- **Descrição**: Deleta um  usuário
+- **Descrição**: Deleta um usuário
 - **Body**:
+
 ```json
 {
   "nome": "Maria Santos",
   "email": "maria@email.com",
   "idade": 25
 }
-````
+```
 
 - **Resposta**: Usuário criado
 - **Status**: 201
