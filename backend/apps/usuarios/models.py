@@ -5,3 +5,6 @@ class Usuario(models.Model):
   email = models.EmailField(unique=True)
   idade = models.PositiveIntegerField()
   created_at = models.DateTimeField(auto_now=True)
+
+  def __str__(self):
+        return self.nome
