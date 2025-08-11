@@ -113,7 +113,4 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Permitir o frontend Vue.js
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",  # porta do Vite
-]
+CORS_ALLOW_ALL_ORIGINS = True
