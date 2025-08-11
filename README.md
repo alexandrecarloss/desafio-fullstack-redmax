@@ -245,3 +245,27 @@ Enviar o link do repositório Git (GitHub, GitLab, etc.) para Responsável do pr
 **Boa sorte! 🚀**
 
 ---
+
+## Cumprindo o desafio
+
+### Escolha das Tecnologias
+Optei por utilizar Django REST Framework (DRF) no backend e Vue.js no frontend.
+Essa decisão foi baseada na minha experiência em projetos acadêmicos durante a faculdade, onde já utilizei essas ferramentas com sucesso em implementações de CRUDs, autenticação e integração com APIs.
+
+- Django REST Framework: permite criar APIs de forma rápida e organizada, com recursos prontos para serialização, validação e autenticação.
+
+- SQLite: escolhido como banco de dados por ser simples de configurar e suficiente para o escopo deste desafio.
+
+- Vue.js: framework progressivo para construção de interfaces reativas, com fácil integração a APIs REST.
+
+- Bootstrap: utilizado para acelerar a construção do layout e garantir responsividade.
+
+## Observação sobre URLs no Django
+O Django REST Framework, por padrão, exige que as URLs terminem com uma barra (/).
+Isso significa que a rota para criar um usuário é: 
+POST http://127.0.0.1:8000/api/usuarios/
+e não:
+POST http://127.0.0.1:8000/api/usuarios
+Se a barra final for omitida em uma requisição POST, será retornado um erro como:
+- RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set.
+Essa configuração foi mantida neste projeto para seguir as boas práticas do Django. Portanto, todas as requisições devem incluir a barra final.
