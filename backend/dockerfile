@@ -1,0 +1,20 @@
+# Use uma imagem Python oficial leve
+FROM python:3.12-slim
+
+# Setar diretório de trabalho
+WORKDIR /app
+
+# Copiar requirements
+COPY requirements.txt .
+
+# Instalar dependências
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copiar todo código do backend
+COPY . .
+
+# Expõe a porta do Django
+EXPOSE 8000
+
+# Comando para rodar o servidor Django (modo dev, use gunicorn em prod)
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]

@@ -17,9 +17,11 @@ class UsuarioSerializer(serializers.ModelSerializer):
     return value
   
   def validate_email(self, value):
-    if Usuario.objects.filter(email=value).exists():
-        raise serializers.ValidationError("Este e-mail já está cadastrado.")
+    usuario_id = self.instance.id if self.instance else None
+    if Usuario.objects.filter(email=value).exclude(id=usuario_id).exists():
+      raise serializers.ValidationError("Este e-mail já está cadastrado.")
     return value
+
 
 
  
